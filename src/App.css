@@ -10,3 +10,8 @@
   font-family: 'Kumbh Sans', sans-serif;
 }
 
+
+.cart-btn:hover .cart{
+  display: block;
+  /* background-color: red; */
+}

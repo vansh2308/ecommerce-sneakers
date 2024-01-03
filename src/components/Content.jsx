@@ -1,7 +1,20 @@
 import React from 'react'
 import cartIcon from "./../assets/icon-cart.svg"
+import { useState } from 'react'
+import { setQty } from '../features/qtySlice'
+import { useDispatch } from 'react-redux'
+
 
 const Content = () => {
+  const [ct, setCt] = useState(0)
+  const dispatch = useDispatch()
+  const increment = () => { setCt(ct+1) }
+  const decrement = () => { setCt( Math.max(0, ct-1)) }
+  const addToCart = (e) => {
+    e.preventDefault()
+    dispatch(setQty(ct))
+  }
+
   return (
     <div className='w-1/2 h-fit pr-10'>
       <span className='text-orange font-medium text-sm'>SNEAKER COMPANY</span>
@@ -22,15 +35,15 @@ const Content = () => {
 
       <div className='flex mt-8'>
         <div className='flex items-center bg-lgrey py-3 px-4 rounded-lg'>
-          <span className='text-orange font-extrabold text-md'>-</span>
-          <span className='mx-8 font-medium text-md'>0</span>
-          <span className='text-orange font-extrabold text-md'>+</span>
+          <button onClick={decrement} className='text-orange font-extrabold text-md'>-</button>
+          <span className='mx-8 min-w-[2rem] text-center font-medium text-md'>{ct}</span>
+          <button onClick={increment} className='text-orange font-extrabold text-md'>+</button>
         </div>
 
-        <div className='flex items-center bg-orange rounded-lg text-white text-sm font-bold px-14 ml-4 min-w-max cursor-pointer shadow-xl shadow-orange/30' >
+        <button onClick={addToCart} className='flex items-center bg-orange rounded-lg text-white text-sm font-bold px-14 ml-4 min-w-max cursor-pointer shadow-xl shadow-orange/30 hover:bg-orange/80' >
           <img src={cartIcon} alt='cart-icon' className='mr-3 w-5 mix-blend-plus-lighter'/>
-          Add to Cart
-        </div>
+          <button > Add to Cart</button>
+        </button>
       </div>
 
 

@@ -34,9 +34,6 @@ export default Display
 
 
 const Thumbnail = ({ src, idx, active, setActive }) => {
-  useEffect(()=>{
-    console.log(idx)
-  }, [])
   return (
     <div className='w-1/5 aspect-square rounded-lg cursor-pointer overflow-hidden relative' style={active==idx ? {
       border: "2px solid #fd7e1b"
