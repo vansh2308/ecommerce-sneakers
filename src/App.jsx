@@ -3,13 +3,16 @@ import Content from './components/Content'
 import Display from './components/Display'
 import Lightbox from './components/Lightbox'
 import Navbar from './components/Navbar'
+import { useSelector } from 'react-redux'
 
 function App() {
+
+  const lightboxDisplay = useSelector(state => state.lightboxDisplay.value);
 
   return (
     <div className='w-screen relative h-fit px-[8%]'>
 
-      <Lightbox />
+      {lightboxDisplay && <Lightbox />}
 
 
       <div className='w-full'>

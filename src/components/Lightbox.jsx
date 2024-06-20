@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux';
+import { setDisplay } from '../features/lightboxSlice';
 import { RiCloseFill } from "react-icons/ri";
 import { MdOutlineNavigateNext } from "react-icons/md";
 import { MdOutlineNavigateBefore } from "react-icons/md";
@@ -13,6 +15,7 @@ import img3 from "./../assets/image-product-3.jpg"
 import img4 from "./../assets/image-product-4.jpg"
 
 export default function Lightbox(props){
+  const dispatch = useDispatch()
   const thumbnails = [tnail1, tnail2, tnail3, tnail4]
   const imgs = [img1, img2, img3, img4]
   const [active, setActive] = useState(0)
@@ -22,7 +25,9 @@ export default function Lightbox(props){
     <div className='lightbox w-screen h-screen absolute left-0 top-0 z-30 flex items-center justify-center  '>
       <div className='w-1/3 h-fit flex flex-col gap-5'>
 
-        <RiCloseFill className="aspect-square text-orange text-[2rem] cursor-pointer hover:text-lorange self-end" />
+        <RiCloseFill className="aspect-square text-orange text-[2rem] cursor-pointer hover:text-lorange self-end" onClick={() => {
+          dispatch(setDisplay(false))
+        }}/>
 
         <div className='w-full h-fit relative'>
           <img src={img1} className='w-full aspect-square rounded-xl' />
