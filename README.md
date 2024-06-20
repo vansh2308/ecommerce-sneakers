@@ -25,7 +25,7 @@ __This is a sneaker e-commerce website__
 ### Links
 
 - [Github URL](https://github.com/vansh2308/ecommerce-sneakers.git)
-- [Live Site URL](https://blog-preview-card.vercel.app/)
+- [Live Site URL](https://ecommerce-sneakers-theta.vercel.app/)
 
 ## Usage
 
