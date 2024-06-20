@@ -10,10 +10,10 @@ import { setQty } from '../features/qtySlice'
 
 const Navbar = () => {
   return (
-    <div className='w-full flex justify-between items-center border-b border-grey/40  mb-24'>
+    <div className='w-full flex justify-between items-center border-b border-grey/40  mb-24 navbar'>
       <div className='flex items-center '>
         <img src={logo} alt='logo' className='mr-16' />
-        <ul className='flex '>
+        <ul className='flex h-nav'>
           <li className='mr-7 text-grey text-sm cursor-pointer py-9'>Collections</li>
           <li className='mr-7 text-grey text-sm cursor-pointer py-9'>Men</li>
           <li className='mr-7 text-grey text-sm cursor-pointer py-9'>Women</li>
@@ -25,7 +25,7 @@ const Navbar = () => {
       <div className='flex items-center'>
         <Cart />
 
-        <img src={avatar} alt='avatar' className='ml-9 w-12 border-2 border-orange rounded-full'></img>
+        <img src={avatar} alt='avatar' className='ml-9 w-12 border-2 cursor-pointer border-orange rounded-full'></img>
       </div>
 
     </div>
@@ -70,7 +70,7 @@ const Cart = (props) => {
                   Checkout
                 </button>
               </>
-              : <div className='w-56 p-6 text-center text-grey font-semibold '>Cart empty</div>
+              : <div className='w-56 p-6 text-center text-xs text-grey font-semibold '>Your cart is empty</div>
 
           }
         </div>

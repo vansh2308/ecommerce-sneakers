@@ -16,12 +16,12 @@ const Display = () => {
   const [active, setActive] = useState(0)
   return (
     <div className='flex flex-col w-1/3'>
-      <img src={imgs[active]} alt='main-img' className='w-full rounded-xl aspect-square mb-7' />
+      <img src={imgs[active]} alt='main-img' className='w-full rounded-xl aspect-square mb-7'  />
       <div className='flex w-full justify-between'>
         {
           thumbnails.map((item, key) => {
             return (
-              <Thumbnail src={item} key={key} active={active} idx={key} setActive = {setActive}/>
+              <Thumbnail src={item} key={key} active={active} idx={key} setActive={setActive}/>
             )
           })
         }

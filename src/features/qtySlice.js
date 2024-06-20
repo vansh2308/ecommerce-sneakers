@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const qtySlice = createSlice({
   name: "qty",
   initialState: {
-    value: 5
+    value: 0
   },
   reducers: {
     setQty: (state, action) => {

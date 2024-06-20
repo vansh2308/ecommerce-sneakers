@@ -11,7 +11,8 @@ export default {
       black: "#27272e",
       grey: "#8d8e92",
       lgrey: "#f7f8fd",
-      white: "#fff"
+      white: "#fff",
+      lorange: "#ffac6a",
     }
   },
   plugins: [],

@@ -15,3 +15,14 @@
   display: block;
   /* background-color: red; */
 }
+
+.h-nav li{
+  border-bottom: 3px solid transparent;
+}
+.h-nav li:hover{
+  border-bottom: 3px solid #fd7e1b;
+}
+
+.lightbox{
+  background-color: #1c1b1be5;
+}
