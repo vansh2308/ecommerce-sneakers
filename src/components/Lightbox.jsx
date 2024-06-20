@@ -25,7 +25,7 @@ export default function Lightbox(props) {
 
 
   return (
-    <div className='lightbox w-screen h-screen absolute left-0 top-0 z-30 flex items-center justify-center max-[850px]:hidden '>
+    <div className='lightbox w-screen h-screen absolute left-0 top-0 z-50 flex items-center justify-center max-[850px]:hidden '>
       <div className='w-1/3 h-fit flex flex-col gap-5'>
 
         <RiCloseFill className="aspect-square text-orange text-[2rem] cursor-pointer hover:text-lorange self-end" onClick={() => {
