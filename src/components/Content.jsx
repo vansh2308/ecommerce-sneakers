@@ -16,11 +16,11 @@ const Content = () => {
   }
 
   return (
-    <div className='w-1/2 h-fit pr-10'>
+    <div className='w-1/2 h-fit pr-10 max-[850px]:w-[85%] max-[850px]:p-0 max-[850px]:pb-20'>
       <span className='text-orange font-medium text-sm'>SNEAKER COMPANY</span>
-      <h1 className='mt-2 font-extrabold text-[2.5rem] leading-tight '>Fall Limited Edition Sneakers</h1>
+      <h1 className='mt-2 font-extrabold text-[2.5rem] leading-tight max-[850px]:text-[2rem]'>Fall Limited Edition Sneakers</h1>
 
-      <div className='text-grey pr-10 my-5'>
+      <div className='text-grey pr-10 my-5 max-[850px]:text-[0.9rem]'>
         These low-profile sneakers are your perfect casual wear
         companion. Featuring a durable rubber outer sole, they'll
         withstand everything the weather can offer.
@@ -33,14 +33,14 @@ const Content = () => {
 
       <span className='line-through text-md text-grey/50 font-bold mt-8'>$250.00</span>
 
-      <div className='flex mt-8'>
-        <div className='flex items-center bg-lgrey py-3 px-4 rounded-lg'>
+      <div className='flex mt-8 max-[850px]:flex-col max-[850px]:gap-4'>
+        <div className='flex items-center bg-lgrey py-3 px-4 rounded-lg max-[850px]:justify-between max-[850px]:px-8'>
           <button onClick={decrement} className='text-orange font-extrabold text-md'>-</button>
           <span className='mx-8 min-w-[2rem] text-center font-medium text-md'>{ct}</span>
           <button onClick={increment} className='text-orange font-extrabold text-md'>+</button>
         </div>
 
-        <button onClick={addToCart} className='flex items-center bg-orange rounded-lg text-white text-sm font-bold px-14 ml-4 min-w-max cursor-pointer shadow-xl shadow-orange/30 hover:bg-orange/80' >
+        <button onClick={addToCart} className='flex items-center bg-orange rounded-lg text-white text-sm font-bold px-14 ml-4 min-w-max cursor-pointer shadow-xl shadow-orange/30 hover:bg-orange/80 max-[850px]:w-full max-[850px]:ml-0 max-[850px]:flex max-[850px]:py-4 max-[850px]:justify-center' >
           <img src={cartIcon} alt='cart-icon' className='mr-3 w-5 mix-blend-plus-lighter'/>
           <span > Add to Cart</span>
         </button>
