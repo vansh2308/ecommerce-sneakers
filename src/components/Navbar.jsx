@@ -12,7 +12,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 
 const Navbar = () => {
-  const [mobileMenuDisplay, setMobileMenuDisplay] = useState(true)
+  const [mobileMenuDisplay, setMobileMenuDisplay] = useState(false)
 
   return (
     <div className='w-full flex justify-between items-center border-b border-grey/40  mb-24 navbar max-[850px]:p-3 max-[850px]:mb-0'>
