@@ -10,7 +10,6 @@ import img4 from "./../assets/image-product-4.jpg"
 
 import { useDispatch, useSelector } from 'react-redux'
 import { setDisplay } from '../features/lightboxSlice'
-import { setActive } from '../features/activeImgSlice'
 
 import Thumbnail from './Thumbnail'
 

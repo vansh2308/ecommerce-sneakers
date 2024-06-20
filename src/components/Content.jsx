@@ -42,7 +42,7 @@ const Content = () => {
 
         <button onClick={addToCart} className='flex items-center bg-orange rounded-lg text-white text-sm font-bold px-14 ml-4 min-w-max cursor-pointer shadow-xl shadow-orange/30 hover:bg-orange/80' >
           <img src={cartIcon} alt='cart-icon' className='mr-3 w-5 mix-blend-plus-lighter'/>
-          <button > Add to Cart</button>
+          <span > Add to Cart</span>
         </button>
       </div>
 
